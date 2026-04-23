@@ -12,6 +12,7 @@ export const students = pgTable('students', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   fullName: varchar({ length: 255 }).notNull(),
   email: varchar({ length: 255 }).notNull().unique(),
+  userId: varchar({ length: 255 }).notNull(),
   age: integer().notNull(),
   dob: date('dob'),
   enrolled: boolean('enrolled').default(false),

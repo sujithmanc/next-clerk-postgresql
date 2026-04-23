@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 import { studentSchema } from './validations'
 import { createStudent, updateStudent, deleteStudent } from './service'
+import { auth } from '@clerk/nextjs/server'
 
 export async function createStudentAction(prevState, formData) {
   const raw = {
@@ -41,7 +42,8 @@ export async function createStudentAction(prevState, formData) {
 
 export async function updateStudentAction(id, formData) {
   const raw = formData
-
+  const currentUser = await auth();
+  console.info('Current User:', currentUser);
   const parsed = studentSchema.safeParse(raw)
   if (!parsed.success) {
     return {
@@ -52,6 +54,7 @@ export async function updateStudentAction(id, formData) {
     }
   }
 
+  //parsed.data.email = currentUser.userId;
   try {
     if (id) {
       await updateStudent(id, parsed.data)
