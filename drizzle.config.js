@@ -10,3 +10,15 @@ export default defineConfig({
         ssl: true,
     },
 });
+
+
+
+const runTimeconfig = defineConfig({
+    out: './drizzle',
+    schema: './src/db/schema.js',
+    dialect: 'postgresql',
+    dbCredentials: {
+        url: process.env.DIRECT_URL, // ← Kit uses DIRECT_URL
+        ssl: true,
+    },
+});

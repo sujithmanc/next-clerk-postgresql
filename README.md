@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Your Supabase Setup
+
+Vercel Serverless Functions  →  Transaction Pooler (6543)  →  PostgreSQL
+Drizzle Kit (local machine)  →  Session Pooler (5432)      →  PostgreSQL
 
 ## Getting Started
 
