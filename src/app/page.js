@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'; // ← this page should be dynamic to reflect database changes in real-time
 import Image from "next/image";
 
 export default function Home() {
