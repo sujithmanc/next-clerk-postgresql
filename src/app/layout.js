@@ -15,19 +15,29 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "CGFJ Bible Quiz",
-  description: "Test your Bible knowledge!",
+  description: "Test your Bible knowledge and challenge your friends!",
 
   openGraph: {
-    title: "CGFJ Bible Quiz", 
-    description: "Test your Bible knowledge! Play the quiz and challenge your friends to see who knows the Bible best." ,
-    url: "https://next-clerk-postgresql.vercel.app",
+    title: "CGFJ Bible Quiz",
+    description: "Play the quiz and see your score!",
+    url: "https://next-clerk-postgresql.vercel.app/quiz",
+    type: "website",
+
     images: [
       {
         url: "https://next-clerk-postgresql.vercel.app/bible-quiz.png",
         width: 1200,
         height: 630,
+        alt: "CGFJ Bible Quiz",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "CGFJ Bible Quiz",
+    description: "Try this quiz!",
+    images: ["https://next-clerk-postgresql.vercel.app/bible-quiz.png"],
   },
 };
 
