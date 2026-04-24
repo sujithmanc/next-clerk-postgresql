@@ -1,54 +1,62 @@
 export const questions = [
   {
+    id: 1,
+    question: "ఇశ్రాయేలీయులను ఐగుప్తు నుండి బయటకు నడిపించింది ఎవరు?",
+    options: ["యేషయా", "యోసేపు", "మోషే", "యోషువ"],
+    answer: 2
+  },
+  {
+    id: 2,
+    question: "గోల్యాతును చంపినది ఎవరు?",
+    options: ["సౌలు", "దావీదు", "సొలొమోను", "యోనాతాను"],
+    answer: 1
+  },
+  {
+    id: 3,
+    question: "యేసుక్రీస్తు చేసిన మొదటి అద్భుతం ఏమిటి?",
+    options: ["నీటిని ద్రాక్షారసముగా మార్చడం", "కుంటివాడిని నయం చేయడం", "ఐదు రొట్టెలతో వేలమందికి ఆహారం ఇవ్వడం", "చనిపోయిన లాజరును లేపడం"],
+    answer: 0
+  },
+  {
     id: 4,
-    question: "Which hook is used to handle side effects in React?",
-    options: ["useState", "useMemo", "useEffect", "useContext"],
+    question: "బైబిల్‌లో మొత్తం ఎన్ని పుస్తకాలు ఉన్నాయి?",
+    options: ["39", "27", "66", "72"],
     answer: 2
   },
   {
     id: 5,
-    question: "In a relational database, what does ACID stand for?",
-    options: [
-      "Atomicity, Consistency, Isolation, Durability",
-      "Access, Control, Integration, Delivery",
-      "Alpha, Code, Information, Data",
-      "Accuracy, Core, Internal, Distribution"
-    ],
-    answer: 0
-  },
-  {
-    id: 6,
-    question: "Which planet is known as the Red Planet?",
-    options: ["Venus", "Mars", "Jupiter", "Saturn"],
-    answer: 1
-  },
-  {
-    id: 7,
-    question: "What is the default port for a Spring Boot application?",
-    options: ["3000", "5432", "8080", "27017"],
-    answer: 2
-  },
-  {
-    id: 8,
-    question: "Which CSS property is used to change the text color of an element?",
-    options: ["font-color", "text-style", "background-color", "color"],
+    question: "యేసుక్రీస్తును అప్పగించిన శిష్యుడు ఎవరు?",
+    options: ["పేతురు", "యోహాను", "తోమా", "యూదా ఇస్కారియోతు"],
     answer: 3
   },
   {
-    id: 9,
-    question: "What does SQL stand for?",
-    options: [
-      "Simple Query Language",
-      "Structured Query Language",
-      "Standard Query Logic",
-      "Sequential Query List"
-    ],
+    id: 6,
+    question: "ప్రేమ గురించి వివరించే 'ప్రేమ అధ్యాయం' అని దేనిని అంటారు?",
+    options: ["1 కొరింథీయులకు 13", "కీర్తనలు 23", "యోహాను 3:16", "మత్తయి 5"],
+    answer: 0
+  },
+  {
+    id: 7,
+    question: "చేప కడుపులో మూడు రోజులు ఉన్న ప్రవక్త ఎవరు?",
+    options: ["ఎలీషా", "యోనా", "దానియేలు", "ఆమోసు"],
     answer: 1
   },
   {
-    id: 10,
-    question: "Who wrote 'Romeo and Juliet'?",
-    options: ["Charles Dickens", "Mark Twain", "William Shakespeare", "Jane Austen"],
+    id: 8,
+    question: "నూతన నిబంధనలో (New Testament) మొదటి పుస్తకం ఏది?",
+    options: ["మార్కు", "లూకా", "మత్తయి", "యోహాను"],
     answer: 2
+  },
+  {
+    id: 9,
+    question: "సింహాల బోనులో వేయబడిన భక్తుడు ఎవరు?",
+    options: ["షద్రకు", "మేషాకు", "అబేద్నెగో", "దానియేలు"],
+    answer: 3
+  },
+  {
+    id: 10,
+    question: "బైబిల్‌లోని చివరి పుస్తకం ఏది?",
+    options: ["ప్రకటన గ్రంథము", "యూదా", "హెబ్రీయులకు", "తీతుకు"],
+    answer: 0
   }
 ];

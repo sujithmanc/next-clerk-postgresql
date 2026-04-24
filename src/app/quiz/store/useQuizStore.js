@@ -9,7 +9,7 @@ export const useQuizStore = create((set, get) => ({
   questions: [],
   currentIndex: 0,
   answers: {},
-  score: 0,
+  score: 0, 
 
   startQuiz: (user) => {
     const shuffled = shuffle(baseQuestions);
