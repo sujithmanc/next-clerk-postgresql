@@ -14,18 +14,20 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
+  // 1. Add this to handle automatic URL resolution
+  metadataBase: new URL("https://next-clerk-postgresql.vercel.app"),
+
   title: "CGFJ Bible Quiz",
-  description: "Test your Bible knowledge and challenge your friends!",
+  description: "Test your Bible knowledge and challenge your friends with this interactive quiz.",
 
   openGraph: {
     title: "CGFJ Bible Quiz",
-    description: "Play the quiz and see your score!",
-    url: "https://next-clerk-postgresql.vercel.app/quiz",
+    description: "Take this fun Bible quiz and see how well you know the Word of God.",
+    url: "/", // Uses metadataBase
     type: "website",
-
     images: [
       {
-        url: "https://next-clerk-postgresql.vercel.app/bible-quiz.png",
+        url: "/bible-quiz.png", // Simplified relative path
         width: 1200,
         height: 630,
         alt: "CGFJ Bible Quiz",
@@ -36,8 +38,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CGFJ Bible Quiz",
-    description: "Try this quiz!",
-    images: ["https://next-clerk-postgresql.vercel.app/bible-quiz.png"],
+    description: "Challenge yourself with this Bible quiz and share your score!",
+    images: ["/bible-quiz.png"], // Simplified relative path
   },
 };
 

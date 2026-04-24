@@ -1,1 +1,0 @@
- "use client"; import {useQuizStore} from "../../store/useQuizStore"; export default function Result(){const {score,restart}=useQuizStore(); return <div className="card bg-base-100 p-4 text-center shadow"><h2 className="text-xl">Score: {score}</h2><button className="btn btn-primary mt-2" onClick={restart}>Restart</button></div>} 
