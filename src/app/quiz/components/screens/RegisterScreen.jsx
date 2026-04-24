@@ -11,8 +11,8 @@ export default function RegisterScreen() {
   const isDisabled = !name || !phone;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-base-200 p-4">
-      <div className="card w-full max-w-sm bg-base-100 shadow-xl">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="card w-full max-w-sm shadow-xl">
         
         <div className="card-body">
           
