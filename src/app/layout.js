@@ -14,14 +14,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "Quiz App 🚀",
-  description: "Test your knowledge and see your score instantly!",
+  title: "CGFJ Bible Quiz",
+  description: "Test your Bible knowledge!",
 
   openGraph: {
-    title: "Quiz App 🚀",
-    description: "Take this fun quiz and challenge yourself!",
+    title: "CGFJ Bible Quiz", 
+    description: "Test your Bible knowledge! Play the quiz and challenge your friends to see who knows the Bible best." ,
     url: "https://next-clerk-postgresql.vercel.app",
-    siteName: "Quiz App",
     images: [
       {
         url: "https://next-clerk-postgresql.vercel.app/bible-quiz.png",
@@ -29,14 +28,6 @@ export const metadata = {
         height: 630,
       },
     ],
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Quiz App 🚀",
-    description: "Try this quiz and see your score!",
-    images: ["https://next-clerk-postgresql.vercel.app/bible-quiz.png"],
   },
 };
 
