@@ -1,0 +1,1 @@
+export const questions=[{question:'2+2?',options:['3','4'],answer:1}]

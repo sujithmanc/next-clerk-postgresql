@@ -1,0 +1,1 @@
+ "use client"; import {useQuizStore} from "../../store/useQuizStore"; import Register from "../screens/RegisterScreen"; import Quiz from "../screens/QuizScreen"; import Result from "../screens/ResultScreen"; export default function QuizFlow(){const s=useQuizStore(s=>s.screen); if(s==='register')return <Register/>; if(s==='quiz')return <Quiz/>; return <Result/>;} 

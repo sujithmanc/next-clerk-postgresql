@@ -1,0 +1,1 @@
+"use client"; import QuizFlow from "./components/flow/QuizFlow"; export default function QuizPage() { return <div className="p-4"><QuizFlow /></div> } 

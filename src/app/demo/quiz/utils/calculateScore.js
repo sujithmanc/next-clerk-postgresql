@@ -1,0 +1,1 @@
+export const calculateScore=(qs,ans)=>qs.reduce((s,q,i)=>s+(ans[i]===q.answer?1:0),0)
