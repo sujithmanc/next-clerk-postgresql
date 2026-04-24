@@ -1,8 +1,13 @@
-export default function Button({ children, ...props }) {
+export default function Button({
+  children,
+  className = "",
+  variant = "primary",
+  ...props
+}) {
   return (
     <button
       {...props}
-      className="w-full bg-blue-600 text-white py-3 rounded-xl mt-4"
+      className={`btn w-full mt-4 btn-${variant} ${className}`}
     >
       {children}
     </button>

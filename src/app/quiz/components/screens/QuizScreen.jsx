@@ -21,10 +21,10 @@ export default function QuizScreen() {
   if (!q) return null;
 
   return (
-    <div className="h-[calc(100dvh-200px)] flex flex-col">
+    <div className="h-[calc(100dvh-200px)] flex flex-col p-4">
 
       {/* Header */}
-      <div className="p-4 bg-base-100 shadow-sm">
+      <div className="mb-4">
         <div className="flex justify-between text-sm mb-2">
           <span className="font-medium">
             Question {currentIndex + 1}
@@ -41,37 +41,32 @@ export default function QuizScreen() {
         />
       </div>
 
-      {/* Question Area */}
-      <div className="flex-1 overflow-y-auto p-4">
-        <div className="card bg-base-100 shadow-md">
-          <div className="card-body">
-
-            <h2 className="text-lg font-semibold mb-4">
-              {q.question}
-            </h2>
-
-            <div className="flex flex-col gap-2">
-              {q.options.map((opt, i) => (
-                <button
-                  key={i}
-                  onClick={() => selectAnswer(i)}
-                  className={`btn justify-start text-left ${
-                    selected === i
-                      ? "btn-primary"
-                      : "btn-outline"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-
-          </div>
-        </div>
+      {/* Question */}
+      <div className="mb-4">
+        <h2 className="text-lg font-semibold">
+          {q.question}
+        </h2>
       </div>
 
-      {/* Footer CTA */}
-      <div className="p-4 bg-base-100 border-t">
+      {/* Options */}
+      <div className="flex flex-col gap-2">
+        {q.options.map((opt, i) => (
+          <button
+            key={i}
+            onClick={() => selectAnswer(i)}
+            className={`btn justify-start text-left ${
+              selected === i
+                ? "btn-primary"
+                : "btn-outline"
+            }`}
+          >
+            {opt}
+          </button>
+        ))}
+      </div>
+
+      {/* Push button to bottom */}
+      <div className="mt-auto pt-4">
         <button
           disabled={selected === undefined}
           onClick={isLast ? submit : next}
