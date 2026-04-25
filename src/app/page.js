@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic'; // ← this page should be dynamic to reflect database changes in real-time
 import Image from "next/image";
-import Link from "next/link";
+import GoogleSignInButton from "./GoogleSignInButton";
 
 export default function Home() {
   return (<main className="min-h-screen flex items-center justify-center">
@@ -16,9 +16,7 @@ export default function Home() {
         height={400}
         className="mx-auto rounded-lg shadow-lg"
       />
-      <button className="mt-6 bg-[#6c47ff] text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
-        <Link href="/quiz">Start the Quiz</Link>
-      </button>
+      <GoogleSignInButton />
     </div>
   </main>
   );

@@ -1,4 +1,6 @@
 import { redirect } from "next/navigation";
+import { getAllQuizSlugs } from "./_services/quizService";
+import Link from "next/link";
 
 async function handleSubmit(formData) {
   "use server";
@@ -6,7 +8,8 @@ async function handleSubmit(formData) {
   if (slug) redirect(`/quiz/${slug}`);
 }
 
-export default function QuizLandingPage() {
+export default async function QuizLandingPage() {
+  const slugs = await getAllQuizSlugs();
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
@@ -15,6 +18,17 @@ export default function QuizLandingPage() {
         <p className="text-sm text-gray-500 mb-6">
           Paste the quiz ID shared with you to get started.
         </p>
+
+        <div>
+          <p className="text-lg font-semibold text-gray-900 mb-2">Available Quizzes:</p>
+          <ul className="space-y-2">
+            {slugs.map((slug) => (
+              <Link key={slug} href={`/quiz/${slug}`} className="text-sm text-gray-600 hover:text-indigo-600 cursor-pointer">
+                {slug}
+              </Link>
+            ))}
+          </ul>
+        </div>
 
         <form action={handleSubmit} className="flex flex-col gap-4">
           <input

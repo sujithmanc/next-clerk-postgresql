@@ -11,11 +11,18 @@ export async function getQuizBySlug(params) {
   const slug = await params;
   console.info(`Fetching quiz with slug: ${slug}`);
 
-    const result = await db
-      .select()
-      .from(quizzes)
-      .where(eq(quizzes.slug, slug))
-      .limit(1);
+  const result = await db
+    .select()
+    .from(quizzes)
+    .where(eq(quizzes.slug, slug))
+    .limit(1);
 
   return result[0] ?? null;
 }
+
+export async function getAllQuizSlugs() {
+  const result = await db.select({ slug: quizzes.slug }).from(quizzes);
+  return result.map((row) => row.slug);
+}
+
+
