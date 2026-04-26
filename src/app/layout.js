@@ -34,7 +34,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/bible-quiz.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: title,
@@ -46,7 +46,7 @@ export const metadata = {
     title: title,
     description:
       "Challenge yourself with this Bible quiz and share your score!",
-    images: ["/bible-quiz.png"],
+    images: ["/opengraph-image"],
   },
 };
 
