@@ -26,3 +26,8 @@ export async function getAllQuizSlugs() {
 }
 
 
+export async function getAllQuizSlugsIDs() {
+  return await db.select({ id: quizzes.id, slug: quizzes.slug }).from(quizzes);
+}
+
+

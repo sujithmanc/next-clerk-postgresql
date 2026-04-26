@@ -53,4 +53,17 @@ export const attempts = pgTable("attempts", {
   unq: unique().on(t.userId, t.quizId), // one attempt per user per quiz
 }));
 
+export const lessons = pgTable("lessons", {
+  id: varchar("id", { length: 191 }).primaryKey(),
+
+  quizId: varchar("quiz_id", { length: 191 })
+    .notNull()
+    .unique()
+    .references(() => quizzes.id),
+
+  content: text("content").notNull(), // 👈 add this
+
+  submittedAt: timestamp("submitted_at").defaultNow().notNull(),
+});
+
 

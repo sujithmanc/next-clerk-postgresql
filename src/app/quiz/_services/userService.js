@@ -39,3 +39,14 @@ export async function getUserById(clerkId) {
 
   return result[0] ?? null;
 }
+
+/**
+ * Fetches a user by clerkId.
+ * @param {string} clerkId
+ */
+export async function getAllUser() {
+  const result = await db
+    .select()
+    .from(users);
+  return result;
+}
