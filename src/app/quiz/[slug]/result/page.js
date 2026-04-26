@@ -37,8 +37,12 @@ export default async function ResultPage({ params }) {
 
   return (
 
-
-    <ResultCard imageUrl={user?.imageUrl} fullName={user?.fullName} maxScore={quiz.questions.length} userScore={attempt.score} testName={quiz.name} />
+    <>
+      <ResultCard imageUrl={user?.imageUrl} fullName={user?.fullName} maxScore={quiz.questions.length} userScore={attempt.score} testName={quiz.title} />
+      <pre>
+        {JSON.stringify(quiz, null, 2)}
+      </pre>
+    </>
 
   );
 }
