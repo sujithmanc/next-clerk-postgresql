@@ -26,6 +26,16 @@ export default async function QuizDescPage({ params }) {
                         Quiz Description
                     </p>
                 </header>
+                {/* CTA */}
+                <div className="mt-10 flex justify-center">
+                    <Link
+                        href={`/quiz/${slug}`}
+                        className="btn btn-info gap-2 px-6"
+                    >
+                        Start Quiz
+                        <ArrowRight size={16} />
+                    </Link>
+                </div>
 
                 {/* Content */}
                 <article className="space-y-4 text-base leading-relaxed text-base-content">
