@@ -49,7 +49,7 @@ export default async function Image() {
                         display: "flex",
                     }}
                 >
-                    Bible Quiz
+                    "Bible Quiz | Telugu | The Book of Ruth"
                 </div>
 
                 {/* Subtitle */}

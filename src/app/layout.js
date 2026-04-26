@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Bible Quiz";
+const title = "Bible Quiz | Telugu | The Book of Ruth";
 
 export const metadata = {
   metadataBase: new URL("https://next-clerk-postgresql.vercel.app"),
@@ -29,7 +29,7 @@ export const metadata = {
   openGraph: {
     title: title,
     description:
-      "Take this fun Bible quiz and see how well you know the Word of God.",
+      "Discover the inspiring story of loyalty and faith! How well do you know Ruth, Naomi, and Boaz? Challenge yourself with our quick and fun Bible Quiz. It is a great way to learn and grow.\nClick the link below to start the Quiz and test your knowledge now!",
     url: "/",
     type: "website",
     images: [
