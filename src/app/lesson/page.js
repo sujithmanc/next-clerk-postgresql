@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { getAllQuizSlugs } from "../quiz/_services/quizService";
 import { List, ArrowRight } from "lucide-react";
