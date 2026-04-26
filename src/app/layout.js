@@ -19,13 +19,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Bible Quiz";
+
 export const metadata = {
   metadataBase: new URL("https://next-clerk-postgresql.vercel.app"),
-  title: "CGFJ Bible Quiz",
+  title: title,
   description:
     "Test your Bible knowledge and challenge your friends with this interactive quiz.",
   openGraph: {
-    title: "CGFJ Bible Quiz",
+    title: title,
     description:
       "Take this fun Bible quiz and see how well you know the Word of God.",
     url: "/",
@@ -35,13 +37,13 @@ export const metadata = {
         url: "/bible-quiz.png",
         width: 1200,
         height: 630,
-        alt: "CGFJ Bible Quiz",
+        alt: title,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CGFJ Bible Quiz",
+    title: title,
     description:
       "Challenge yourself with this Bible quiz and share your score!",
     images: ["/bible-quiz.png"],
@@ -61,7 +63,7 @@ export default function RootLayout({ children }) {
 
             {/* Left: App Name */}
             <h1 className="text-sm sm:text-base font-semibold">
-              CGFJ Quiz
+              {title}
             </h1>
 
             {/* Right: Auth */}
